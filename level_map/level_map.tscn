@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://debcdg6x8pwxu"]
+[gd_scene load_steps=12 format=3 uid="uid://debcdg6x8pwxu"]
 
 [ext_resource type="Texture2D" uid="uid://6m13dptcuqxq" path="res://assets/spritesheets/grass.png" id="1_emgoy"]
 [ext_resource type="Texture2D" uid="uid://yifn2vw3mncj" path="res://assets/spritesheets/concrete.png" id="2_1cojx"]
@@ -285,6 +285,10 @@ sources/1 = SubResource("TileSetAtlasSource_7ur6d")
 sources/2 = SubResource("TileSetAtlasSource_loia3")
 sources/3 = SubResource("TileSetAtlasSource_yix7o")
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_v8wud"]
+outlines = Array[PackedVector2Array]([PackedVector2Array(303, 161, 1426, 153, 1428, 89, 2791, 91, 2803, 153, 3424, 153, 3429, 193, 3494, 214, 3501, 267, 3630, 282, 3623, 608, 3545, 619, 3551, 672, 3475, 689, 3494, 928, 3556, 922, 3570, 979, 3698, 981, 3721, 1191, 3761, 1183, 3761, 1566, 3687, 1587, 3687, 1700, 3477, 1702, 3467, 1628, 3047, 1640, 3053, 1774, 1422, 1778, 1413, 1698, 600, 1704, 600, 1636, 528, 1636, 532, 1522, 466, 1517, 466, 1227, 534, 1231, 526, 928, 462, 930, 456, 691, 244, 676, 254, 661, 413, 655, 405, 373, 286, 367)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
 [node name="LevelMap" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -304,3 +308,6 @@ position = Vector2(597, 449)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(526, 418)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_v8wud")
