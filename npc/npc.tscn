@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmdl0yfguebfl"]
+
+[ext_resource type="Texture2D" uid="uid://b55ls2ux2nqwq" path="res://assets/images/soldier1_gun.png" id="1_lewwt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d0eyx"]
+height = 28.0
+
+[node name="NPC" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, 2.08165e-12)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_lewwt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
+shape = SubResource("CapsuleShape2D_d0eyx")
