@@ -14,10 +14,7 @@ func _ready():
 func _physics_process(delta):
 	# move the npc to the clicked location
 	if Input.is_action_just_pressed("target") == true:
-		print(get_global_mouse_position())
 		nav_agent.target_position = get_global_mouse_position()
-		print("nav get_target_position: ", nav_agent.get_next_path_position())
-		print("nav velocity: ", nav_agent.velocity)
 	
 	update_navigation()
 
